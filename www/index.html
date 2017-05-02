@@ -2,9 +2,9 @@
 <html>
     <head>
 
-    <title>ShotRoulette</title>
+    	<title>What's the Plan?</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!--SOME APPLE SEETINGS-->
         <meta name="apple-mobile-web-app-capable" content="yes">
@@ -13,33 +13,79 @@
         <!--You need this although you do not need a physical reference as build will inject it in-->
         <script type="text/javascript" src="cordova.js"></script>
 
-        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBCKCjn12f4AgGKtmrV1Se4py1KAFkLXl4&sensor=false"></script>
-        <script type="text/javascript" src="scripts/jquery-2.2.2.min.js"></script>
-        <script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
-        <script type="text/javascript" src="scripts/scripts.js"></script>
-
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Quicksand:300,400,700" rel="stylesheet">
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css" />
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+
+		<script type="text/javascript" src="scripts/scripts.js"></script>
+        <script type="text/javascript" async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBCKCjn12f4AgGKtmrV1Se4py1KAFkLXl4"></script>
+
 
     </head>
 <body>
 
-<div data-role="page" id="home" data-theme="b">
-<img src="css/images/shotglass.jpg" width="200" height="200">
-    
-</div>
+	<div data-role="page" id="p1">
 
-<div data-role="page" id="startTracking" data-theme='b'>   
-    
-</div>
+	<h1>What's the Plan?</h1>
 
-<div data-role="page" id="history" data-theme='b'>
-    
-</div>
+		<button id="buttonStart" type="button">Start Planning!</button>
 
-<div data-role="page" id="track_info" data-theme="b">
-   
-</div>
+	</div>
 
-        
-    </body>
+	<div data-role="page" id="p2">
+
+	<h2>Pick a Cafe</h2>
+
+	<div id="places">
+
+		<div class="place" id="place1">
+			
+		</div>
+		<div class="place" id="place2">
+			
+		</div>
+		<div class="place" id="place3">
+			
+		</div>
+		
+	</div>
+	
+	</div>
+
+	<div data-role="page" id="p3">
+
+	<h2>Pick an Activity</h2>
+
+	<div id="places">
+		
+	</div>
+	
+	</div>
+
+
+	<div data-role="page" id="p4">
+
+	<h2>Pick a place to Eat</h2>
+
+	<div id="places">
+		
+	</div>
+	
+	</div>
+
+	<div data-role="page" id="p5">
+
+	<h2>Pick place to Drink</h2>
+
+	<div id="places">
+		
+	</div>
+	
+	</div>
+
+</body>
 </html>

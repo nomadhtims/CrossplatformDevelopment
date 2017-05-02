@@ -1,3 +1,90 @@
-body {
- background: linear-gradient(#ff2e09, #fff700 ,  #ffffff );
+body{
+	color: #000000;
+	background: #FF7F00;
 }
+
+h1 {
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	color: #efefef;
+	margin-top: 40%;
+}
+h2 {
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	font-size: 2em;
+	color: #efefef;
+	margin-top: 5%;
+}
+
+
+#buttonStart {
+	position: absolute;
+	border: none;
+	top: 50%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+#cafe{
+
+	position: absolute;
+	border: none;
+	top: 10%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+}
+
+#restaurants{
+	position: absolute;
+	border: none;
+	top: 22%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+}
+
+#drinks{
+	position: absolute;
+	border: none;
+	top: 34%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+
+}
+
+#sports{
+	position: absolute;
+	border: none;
+	top: 46%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+}
+
+#cinema{
+	position: absolute;
+	border: none;
+	top: 58%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+
+}
+
+#shop{
+	position: absolute;
+	border: none;
+	top: 70%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+
+}
+ #map {
+        height: 400px;
+        width: 100%;
+ }
