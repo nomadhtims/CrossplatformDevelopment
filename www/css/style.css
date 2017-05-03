@@ -1,6 +1,7 @@
 body{
 	color: #000000;
 	background: #FF7F00;
+	font-family: 'Arial', sans-serif;
 }
 
 h1 {
@@ -88,3 +89,13 @@ h2 {
         height: 400px;
         width: 100%;
  }
+
+.place{
+	font-family: 
+	font-size: 1.5em;
+	background: #efefef;
+	text-align: center;
+	padding: 1em;
+	margin-bottom: 1em;
+
+}
