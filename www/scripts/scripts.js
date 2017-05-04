@@ -15,7 +15,6 @@ $(document).ready(function () {
 
 function setup() {
 
-	markers[];
 
 	$('#buttonstart').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
