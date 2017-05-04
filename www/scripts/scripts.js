@@ -14,6 +14,7 @@ $(document).ready(function () {
 });
 
 function setup() {
+
 	$('#buttonstart').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
 			transition: 'slidedown',
@@ -30,10 +31,10 @@ function setup() {
 				console.log(JSON.parse(localStorage.placeInfo));
 				populate_place_list();
 			}
-		});
-
+		})
 	});
-$('#buttonHome').click(function(){
+
+	$('#buttonHome').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
 			transition: 'slidedown',
 			changeHash: false
@@ -51,7 +52,17 @@ $('#buttonHome').click(function(){
 			}
 		});
 
+		// var myLatLng = {lat: data.results[7].geometry.location.lat, lng: data.results[7].geometry.location.lng};
+
+		// var marker = new google.maps.Marker({
+		// 	position: myLatLng,
+		// 	animation: google.maps.Animation.DROP,
+		// 	map: map
+		// });
+
+		// marker.setMap(map);
 	});
+
 	$('#buttoncafe').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p2', {
 			transition: 'slidedown',
@@ -70,7 +81,12 @@ $('#buttonHome').click(function(){
 			}
 		});
 
+		cafeMap = new google.maps.Map(document.getElementById('cafeMap'), {
+			center: {lat: 0, lng: 0},
+			zoom: 5
+		});
 	});
+
 	$('#buttonactivity').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p3', {
 			transition: 'slidedown',
@@ -88,8 +104,9 @@ $('#buttonHome').click(function(){
 				populate_place_list();
 			}
 		});
+	});
 
-	});$('#buttoneat').click(function(){
+	$('#buttoneat').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p4', {
 			transition: 'slidedown',
 			changeHash: false
@@ -107,7 +124,9 @@ $('#buttonHome').click(function(){
 			}
 		});
 
-	});$('#buttondrink').click(function(){
+	});
+
+	$('#buttondrink').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p5', {
 			transition: 'slidedown',
 			changeHash: false
@@ -143,7 +162,6 @@ $('#buttonHome').click(function(){
 				populate_place_list();
 			}
 		});
-
 	});
 
 	$('#p2').children().click(function(){

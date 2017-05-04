@@ -1,5 +1,5 @@
 body{
-	color: #efefef;
+	/*color: #efefef;*/
 	background: #FF7F00;
 	font-family: 'Arial', sans-serif;
 }
@@ -115,18 +115,32 @@ h3 {
 	background: #efefef;
 }
 
-
- #map {
-        height: 400px;
-        width: 100%;
- }
-
 .place{
-
+	height: 20%;
 	background: #efefef;
 	font-size: 1.5em;
 	text-align: center;
 	padding: 1em;
-	margin-bottom: 1em;
+	width: 100%;
+	position: relative;
+	float: left;
+}
 
+#places {
+	width: 100%;
+	height: 60%;
+	position: relative;
+	float: left;
+}
+
+.map {
+	height: 10em;
+	width: 100%;
+}
+
+.title {
+	width: 100%;
+	height: 5%;
+	position: relative;
+	float: left;
 }
