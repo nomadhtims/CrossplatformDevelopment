@@ -1,5 +1,5 @@
 body{
-	color: #000000;
+	color: #efefef;
 	background: #FF7F00;
 	font-family: 'Arial', sans-serif;
 }
@@ -8,7 +8,7 @@ h1 {
 	font-family: 'Arial', sans-serif;
 	text-align: center;
 	color: #efefef;
-	margin-top: 40%;
+	margin-top: 20%;
 }
 h2 {
 	font-family: 'Arial', sans-serif;
@@ -17,12 +17,54 @@ h2 {
 	color: #efefef;
 	margin-top: 5%;
 }
-
-
-#buttonStart {
+h3 {
+	font-family: 'Arial', sans-serif;
+	text-align: center;
+	color: #efefef;
+	margin-top: 35%;
+	font-size: 2.5em;
+}
+#buttonstart {
 	position: absolute;
 	border: none;
 	top: 50%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+
+#buttoneat {
+	position: absolute;
+	border: none;
+	top: 30%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+#buttondrink {
+	position: absolute;
+	border: none;
+	top: 40%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+#buttonactivity {
+	position: absolute;
+	border: none;
+	top: 50%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+#buttoncafe {
+	position: absolute;
+	border: none;
+	top: 60%;
 	font-size: 1.5em;
 	color: #FF7F00;
 	background: #efefef;
@@ -66,34 +108,16 @@ h2 {
 	background: #efefef;
 }
 
-#cinema{
-	position: absolute;
-	border: none;
-	top: 58%;
-	font-size: 1.5em;
-	color: #FF7F00;
-	background: #efefef;
 
-}
-
-#shop{
-	position: absolute;
-	border: none;
-	top: 70%;
-	font-size: 1.5em;
-	color: #FF7F00;
-	background: #efefef;
-
-}
  #map {
         height: 400px;
         width: 100%;
  }
 
 .place{
-	font-family: 
-	font-size: 1.5em;
+
 	background: #efefef;
+	font-size: 1.5em;
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 1em;

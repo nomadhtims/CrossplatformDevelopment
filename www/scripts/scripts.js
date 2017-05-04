@@ -14,9 +14,101 @@ $(document).ready(function () {
 });
 
 function setup() {
+	$('#buttonstart').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
 
-	$('#buttonStart').click(function(){
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});
+$('#buttonHome').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});
+	$('#buttoncafe').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p2', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});
+	$('#buttonactivity').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p3', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});$('#buttoneat').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p4', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});$('#buttondrink').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p5', {
 			transition: 'slidedown',
 			changeHash: false
 		}, 5000);
