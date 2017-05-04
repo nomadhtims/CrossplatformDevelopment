@@ -24,6 +24,7 @@ h3 {
 	margin-top: 35%;
 	font-size: 2.5em;
 }
+
 #buttonstart {
 	position: absolute;
 	border: none;
@@ -33,6 +34,7 @@ h3 {
 	background: #efefef;
 	
 }
+
 #buttonHome{
 	position: absolute;
 	border: none;
@@ -41,6 +43,7 @@ h3 {
 	color: #FF7F00;
 	background: #efefef;
 }
+
 #buttoneat {
 	position: absolute;
 	border: none;
@@ -50,6 +53,7 @@ h3 {
 	background: #efefef;
 	
 }
+
 #buttondrink {
 	position: absolute;
 	border: none;
@@ -59,6 +63,7 @@ h3 {
 	background: #efefef;
 	
 }
+
 #buttonactivity {
 	position: absolute;
 	border: none;
@@ -68,6 +73,7 @@ h3 {
 	background: #efefef;
 	
 }
+
 #buttoncafe {
 	position: absolute;
 	border: none;
@@ -77,6 +83,17 @@ h3 {
 	background: #efefef;
 	
 }
+
+#buttonmap {
+	position: absolute;
+	border: none;
+	top: 70%;
+	font-size: 1.5em;
+	color: #FF7F00;
+	background: #efefef;
+	
+}
+
 #cafe{
 
 	position: absolute;
@@ -118,9 +135,9 @@ h3 {
 .place{
 	height: 20%;
 	background: #efefef;
-	font-size: 1.5em;
+	font-size: 1.1em;
 	text-align: center;
-	padding: 1em;
+	padding: 1em 0em;
 	width: 100%;
 	position: relative;
 	float: left;
@@ -134,13 +151,20 @@ h3 {
 }
 
 .map {
-	height: 10em;
+	height: 15em;
 	width: 100%;
+	position: absolute;
+	bottom: 0;
 }
 
 .title {
 	width: 100%;
-	height: 5%;
+	font-weight: 700;
+	height: 1.5em;
 	position: relative;
 	float: left;
+	text-align: center;
+	padding: 1em 0em;
+	font-size: 2em;
+	color: #efefef;
 }

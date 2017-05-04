@@ -45,10 +45,11 @@
 		<button id="buttonactivity" type="button">Pick an Activity!</button>
 		<button id="buttoneat" type="button">Get something to Eat!</button>
 		<button id="buttondrink" type="button">Find a Place to Drink!</button>
+		<button id="buttonmap" type="button">Check that Map!</button>
 
 	</div>
 
-	<div data-role="page" id="p2">
+	<div data-role="page" class="page" id="p2">
 
 		<div class="title">
 			Pick a Cafe
@@ -66,7 +67,7 @@
 				
 			</div>
 	
-			<button id="buttonHome" type="button">
+			<button class="buttonHome" type="button">
 				Home
 			</button>
 			
@@ -78,7 +79,7 @@
 
 	</div>
 
-	<div data-role="page" id="p3">
+	<div data-role="page" class="page" id="p3">
 
 		<h2>Pick an Activity</h2>
 
@@ -94,14 +95,19 @@
 				
 			</div>
 			
+			<button class="buttonHome" type="button">
+				Home
+			</button>
+			
 		</div>
 
-		<div class="map"></div>
-		<button id="buttonHome" type="button">Home</button>
+		<div class="map" id="activityMap">
+			
+		</div>
 	</div>
 
 
-	<div data-role="page" id="p4">
+	<div data-role="page" class="page" id="p4">
 
 		<h2>Pick a place to Eat</h2>
 
@@ -117,13 +123,18 @@
 				
 			</div>
 			
+			<button class="buttonHome" type="button">
+				Home
+			</button>
+			
 		</div>
 
-		<div class="map"></div>
-		<button id="buttonHome" type="button">Home</button>
+		<div class="map" id="eatMap">
+			
+		</div>
 	</div>
 
-	<div data-role="page" id="p5">
+	<div data-role="page" class="page" id="p5">
 
 		<h2>Pick place to Drink</h2>
 
@@ -139,10 +150,15 @@
 				
 			</div>
 			
+			<button class="buttonHome" type="button">
+				Home
+			</button>
+			
 		</div>
 
-		<div class="map"></div>
-		<button id="buttonHome" type="button">Home</button>
+		<div class="map" id="drinkMap">
+			
+		</div>
 	</div>
 
 </body>

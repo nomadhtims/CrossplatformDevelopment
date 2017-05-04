@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
-    id          = "com.lincoln.locationtracker"
+    id          = "com.lincoln.dayplanner"
     versionCode = "1"
     version     = "1.0.2" >
     
     <!-- versionCode is optional and Android only -->
-    <name>Geolocation Tracker</name>
+    <name>What's The Plan?</name>
     <description>
-        Example of a hybrid geolaction app.
+        Day Planner App.
     </description> 
     <author href="website" email="your email">
-        Wayne Christian
+        Damon Smith
     </author>
 	<!--
       This allows your app to load assets from all *.phongap.com domains
@@ -62,7 +62,7 @@
     <plugin name="cordova-plugin-device-orientation" />
     <plugin name="cordova-plugin-dialogs" />
 	<plugin name="cordova-plugin-vibration" />
-    <!--<plugin name="cordova-plugin-geolocation" />-->
+    <plugin name="cordova-plugin-geolocation" />
     <plugin name="cordova-plugin-inappbrowser" />
     <!--<plugin name="cordova-plugin-media" />-->
     <plugin name="cordova-plugin-network-information" />

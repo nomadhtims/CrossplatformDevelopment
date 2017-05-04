@@ -15,6 +15,8 @@ $(document).ready(function () {
 
 function setup() {
 
+	markers[];
+
 	$('#buttonstart').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
 			transition: 'slidedown',
@@ -82,8 +84,8 @@ function setup() {
 		});
 
 		cafeMap = new google.maps.Map(document.getElementById('cafeMap'), {
-			center: {lat: 0, lng: 0},
-			zoom: 5
+			center: {lat: parseFloat(localStorage.lat), lng: parseFloat(localStorage.lng)},
+			zoom: 13
 		});
 	});
 
@@ -97,12 +99,17 @@ function setup() {
 			type: "GET",
 			crossDomain:true,
 			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=museum|art_gallery|shopping_mall|zoo|&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
 			success: function(info){
 				localStorage.setItem("placeInfo", JSON.stringify(info));
 				console.log(JSON.parse(localStorage.placeInfo));
 				populate_place_list();
 			}
+		});
+
+		activityMap = new google.maps.Map(document.getElementById('activityMap'), {
+			center: {lat: parseFloat(localStorage.lat), lng: parseFloat(localStorage.lng)},
+			zoom: 13
 		});
 	});
 
@@ -116,12 +123,17 @@ function setup() {
 			type: "GET",
 			crossDomain:true,
 			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=restaurant&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
 			success: function(info){
 				localStorage.setItem("placeInfo", JSON.stringify(info));
 				console.log(JSON.parse(localStorage.placeInfo));
 				populate_place_list();
 			}
+		});
+
+		eatMap = new google.maps.Map(document.getElementById('eatMap'), {
+			center: {lat: parseFloat(localStorage.lat), lng: parseFloat(localStorage.lng)},
+			zoom: 13
 		});
 
 	});
@@ -136,7 +148,7 @@ function setup() {
 			type: "GET",
 			crossDomain:true,
 			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=bar&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
 			success: function(info){
 				localStorage.setItem("placeInfo", JSON.stringify(info));
 				console.log(JSON.parse(localStorage.placeInfo));
@@ -144,86 +156,32 @@ function setup() {
 			}
 		});
 
+		drinkMap = new google.maps.Map(document.getElementById('drinkMap'), {
+			center: {lat: parseFloat(localStorage.lat), lng: parseFloat(localStorage.lng)},
+			zoom: 13
+		});
+
 	});
-	$('#buttonHome').click(function(){
+	$('.buttonHome').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+	});
+
+	$('.page').children('#places').children('.place').click(function(){
 		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
 			transition: 'slidedown',
 			changeHash: false
 		}, 5000);
 
-		$.ajax({ 
-			type: "GET",
-			crossDomain:true,
-			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
-			success: function(info){
-				localStorage.setItem("placeInfo", JSON.stringify(info));
-				console.log(JSON.parse(localStorage.placeInfo));
-				populate_place_list();
-			}
-		});
-	});
+		placesList = JSON.parse(localStorage.placeInfo);
 
-	$('#p2').children().click(function(){
-		console.log("HEY");
-		$(':mobile-pagecontainer').pagecontainer('change', '#p3', {
-			transition: 'slidedown',
-			changeHash: false
-		}, 5000);
+		if ($(this).hasClass("place1")) {
+			placesList.results[0].name
+		}
 
-	    $.ajax({ 
-			type: "GET",
-			crossDomain:true,
-			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=museum|art_gallery|shopping_mall|zoo&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
-			success: function(info){
-				console.log(info);
-				localStorage.setItem("placeInfo", JSON.stringify(info));
-				console.log(JSON.parse(localStorage.placeInfo));
-				populate_place_list();
-			}
-		});
-
-	});
-
-	$('#p3').children('#places').children('.place').click(function(){
-		$(':mobile-pagecontainer').pagecontainer('change', '#p4', {
-			transition: 'slidedown',
-			changeHash: false
-		}, 5000);
-
-        $.ajax({ 
-			type: "GET",
-			crossDomain:true,
-			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=restaurant&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
-			success: function(info){
-				console.log(info);
-				localStorage.setItem("placeInfo", JSON.stringify(info));
-				console.log(JSON.parse(localStorage.placeInfo));
-				populate_place_list();
-			}
-		});
-	});
-
-	$('#p4').children('#places').children('.place').click(function(){
-		$(':mobile-pagecontainer').pagecontainer('change', '#p5', {
-			transition: 'slidedown',
-			changeHash: false
-		}, 5000);
-
-        $.ajax({ 
-			type: "GET",
-			crossDomain:true,
-			dataType: "json",
-			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=bar&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
-			success: function(info){
-				console.log(info);
-				localStorage.setItem("placeInfo", JSON.stringify(info));
-				console.log(JSON.parse(localStorage.placeInfo));
-				populate_place_list();
-			}
-		});
+		console.log($(this).text());
 
 	});
 
@@ -265,6 +223,7 @@ function populate_place_list() {
 	$('.place1').text(placesList.results[0].name);
 	$('.place2').text(placesList.results[1].name);
 	$('.place3').text(placesList.results[2].name);
+
 }
 
 
