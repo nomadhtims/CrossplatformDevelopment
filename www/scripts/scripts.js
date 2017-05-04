@@ -126,6 +126,25 @@ $('#buttonHome').click(function(){
 		});
 
 	});
+	$('#buttonHome').click(function(){
+		$(':mobile-pagecontainer').pagecontainer('change', '#p1', {
+			transition: 'slidedown',
+			changeHash: false
+		}, 5000);
+
+		$.ajax({ 
+			type: "GET",
+			crossDomain:true,
+			dataType: "json",
+			url: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + localStorage.lat + "," + localStorage.lng + "&rankby=distance&type=cafe&key=AIzaSyCxMinfyqXxHfaqDnADTHbNet8KI4ZweHA",
+			success: function(info){
+				localStorage.setItem("placeInfo", JSON.stringify(info));
+				console.log(JSON.parse(localStorage.placeInfo));
+				populate_place_list();
+			}
+		});
+
+	});
 
 	$('#p2').children().click(function(){
 		console.log("HEY");
